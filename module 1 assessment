@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract smart
+ { uint public data;
+      function setData(uint newData) public
+     {require(newData != 0, "Data cannot be zero");
+      assert(newData != 999);
+      data = newData;
+     }
+
+    function getData() public view returns (uint) 
+    {
+        return data;
+    }
+
+    function Revert() public pure 
+    {
+      revert(" revert called");
+    }
+}
